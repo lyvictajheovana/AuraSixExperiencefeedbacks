@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurasix Feedbacks - Futurístico</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #0a0a1f;
+    color: #c0f0ff;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background: linear-gradient(90deg, #6a0dad, #00ffff);
+    color: #000;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 1.7em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px #00ffff;
+  }
+  h2 {
+    color: #00ffff;
+    border-bottom: 1px solid #00ffff;
+    padding-bottom: 5px;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .feedback-container {
+    max-width: 900px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .feedback {
+    background: rgba(10,10,30,0.9);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #00ffff;
+    position: relative;
+    overflow: hidden;
+  }
+  .feedback h3 {
+    margin: 0;
+    color: #00ffff;
+    font-size: 1.2em;
+  }
+  .feedback .stars {
+    color: #ffd700;
+    margin: 5px 0;
+    font-size: 1.1em;
+  }
+  .feedback p {
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  .submit-feedback {
+    background: rgba(0,255,255,0.05);
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #00ffff;
+  }
+  .submit-feedback h3 {
+    margin-top: 0;
+    color: #00ffff;
+  }
+  .submit-feedback input, 
+  .submit-feedback textarea,
+  .submit-feedback select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #00ffff;
+    background: rgba(0,0,0,0.8);
+    color: #c0f0ff;
+  }
+  .submit-feedback button {
+    background: #00ffff;
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 0 10px #00ffff;
+    transition: 0.2s;
+  }
+  .submit-feedback button:hover {
+    background: #00cccc;
+  }
+</style>
+</head>
+<body>
+
+<header>Aurasix Experience - Feedbacks Futurísticos</header>
+
+<h2>O que nossos clientes dizem</h2>
+
+<div class="feedback-container" id="feedbackContainer">
+  <div class="feedback">
+    <h3>Laura S.</h3>
+    <div class="stars">★★★★★</div>
+    <p>"A Aurasix transformou a festa do meu aniversário em algo inesquecível! Atendimento excelente e os pacotes são super personalizados."</p>
+  </div>
+  <div class="feedback">
+    <h3>Rafael M.</h3>
+    <div class="stars">★★★★☆</div>
+    <p>"Organizei uma confraternização com meus colegas e todos ficaram impressionados. Alguns detalhes poderiam ser mais rápidos, mas excelente."</p>
+  </div>
+  <div class="feedback">
+    <h3>Camila T.</h3>
+    <div class="stars">★★★★★</div>
+    <p>"O site é incrível e facilita muito na escolha dos pacotes. A experiência é futurista e divertida. Recomendo a todos."</p>
+  </div>
+  <div class="feedback">
+    <h3>Gabriel R.</h3>
+    <div class="stars">★★★☆☆</div>
+    <p>"Gostei do conceito e da personalização, mas senti falta de mais opções de bebidas no pacote. Ainda assim, recomendo."</p>
+  </div>
+  <div class="feedback">
+    <h3>Juliana P.</h3>
+    <div class="stars">★★★★★</div>
+    <p>"Simplesmente amei! O carrinho interativo e os pacotes são super fáceis de entender. Meus amigos adoraram a festa."</p>
+  </div>
+</div>
+
+<h2>Deixe seu feedback</h2>
+<div class="submit-feedback">
+  <h3>Adicione um comentário fictício</h3>
+  <input type="text" id="name" placeholder="Seu nome">
+  <textarea id="comment" placeholder="Seu feedback"></textarea>
+  <select id="stars">
+    <option value="★★★★★">★★★★★</option>
+    <option value="★★★★☆">★★★★☆</option>
+    <option value="★★★☆☆">★★★☆☆</option>
+    <option value="★★☆☆☆">★★☆☆☆</option>
+    <option value="★☆☆☆☆">★☆☆☆☆</option>
+  </select>
+  <button onclick="addFeedback()">Enviar</button>
+</div>
+
+<script>
+  function addFeedback() {
+    const name = document.getElementById('name').value || "Anônimo";
+    const comment = document.getElementById('comment').value || "Sem comentário";
+    const stars = document.getElementById('stars').value;
+
+    const container = document.getElementById('feedbackContainer');
+    const div = document.createElement('div');
+    div.classList.add('feedback');
+    div.innerHTML = `<h3>${name}</h3><div class="stars">${stars}</div><p>${comment}</p>`;
+    container.prepend(div);
+
+    // Limpa campos
+    document.getElementById('name').value = "";
+    document.getElementById('comment').value = "";
+    document.getElementById('stars').value = "★★★★★";
+  }
+</script>
+
+</body>
+</html>
