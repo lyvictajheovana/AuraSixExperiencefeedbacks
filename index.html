@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AuraSix Experience - Feedbacks Futurísticos</title>
+<title>AuraSix Experience - Central de Feedbacks</title>
 
 <style>
 body {
@@ -21,21 +21,22 @@ header {
   padding: 25px 0;
   font-size: 1.8em;
   font-weight: bold;
-  letter-spacing: 1px;
   text-shadow: 0 0 8px #00ffff;
 }
 
-h2 {
-  color: #00ffff;
-  border-bottom: 1px solid #00ffff;
-  padding-bottom: 5px;
-  margin-top: 40px;
+.badge {
   text-align: center;
+  margin-top: 10px;
+  padding: 12px;
+  background: rgba(0,255,255,0.1);
+  border-top: 1px solid #00ffff;
+  border-bottom: 1px solid #00ffff;
+  font-size: 0.95em;
 }
 
 .feedback-container {
   max-width: 900px;
-  margin: 20px auto;
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -46,7 +47,6 @@ h2 {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 0 15px #00ffff;
-  animation: fadeIn 0.4s ease-in-out;
 }
 
 .feedback h3 {
@@ -56,21 +56,30 @@ h2 {
 
 .stars {
   color: #ffd700;
-  margin: 5px 0;
-  font-size: 1.1em;
+  margin: 6px 0;
 }
 
 .feedback p {
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .response {
   margin-top: 12px;
-  padding: 10px;
+  padding: 12px;
   border-left: 3px solid #00ffff;
   background: rgba(0,255,255,0.08);
   border-radius: 6px;
   font-size: 0.95em;
+}
+
+.protocol {
+  margin-top: 8px;
+  font-size: 0.85em;
+  color: #00ffff;
+}
+
+.status {
+  font-weight: bold;
 }
 
 .submit-feedback {
@@ -103,138 +112,59 @@ h2 {
   cursor: pointer;
   font-weight: bold;
   box-shadow: 0 0 10px #00ffff;
-  transition: 0.2s;
-}
-
-.submit-feedback button:hover {
-  background: #00cccc;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 </style>
 </head>
 
 <body>
 
-<header>AuraSix Experience - Feedbacks Futurísticos</header>
+<header>AuraSix Experience - Central de Feedbacks</header>
 
-<h2>O que nossos clientes dizem</h2>
+<div class="badge">
+🏆 Empresa que responde 100% dos feedbacks | Tempo médio de resposta: 12 minutos
+</div>
 
 <div class="feedback-container" id="feedbackContainer">
-
-<!-- 15 CLIENTES FICTÍCIOS -->
 
 <div class="feedback">
 <h3>Laura S.</h3>
 <div class="stars">★★★★★</div>
-<p>"A AuraSix transformou minha festa em algo inesquecível!"</p>
-<div class="response"><strong>AuraSix Experience:</strong> Ficamos honrados em fazer parte desse momento especial 💜</div>
+<p>"Desde o primeiro contato até o final do evento, tudo foi extremamente organizado. A equipe demonstrou profissionalismo e atenção aos detalhes."</p>
+<div class="response">
+<strong>AuraSix Experience:</strong> Laura, agradecemos profundamente sua confiança. Trabalhamos para manter nosso padrão de excelência em cada experiência.
 </div>
-
-<div class="feedback">
-<h3>Rafael M.</h3>
-<div class="stars">★★★★☆</div>
-<p>"Organização impecável e equipe muito atenciosa."</p>
-<div class="response"><strong>AuraSix Experience:</strong> Obrigado, Rafael! Já estamos ajustando detalhes para atingir 5 estrelas 🚀</div>
-</div>
-
-<div class="feedback">
-<h3>Camila T.</h3>
-<div class="stars">★★★★★</div>
-<p>"Experiência futurista incrível. Recomendo demais."</p>
-<div class="response"><strong>AuraSix Experience:</strong> Seu feedback ilumina nossa missão ✨</div>
-</div>
-
-<div class="feedback">
-<h3>Gabriel R.</h3>
-<div class="stars">★★★☆☆</div>
-<p>"Gostei bastante, mas poderia ter mais opções de bebidas."</p>
-<div class="response"><strong>AuraSix Experience:</strong> Agradecemos a sugestão! Já estamos expandindo o cardápio 🍹</div>
-</div>
-
-<div class="feedback">
-<h3>Juliana P.</h3>
-<div class="stars">★★★★★</div>
-<p>"O carrinho interativo foi o destaque da festa."</p>
-<div class="response"><strong>AuraSix Experience:</strong> Que alegria saber disso! 💫</div>
-</div>
-
-<div class="feedback">
-<h3>Lucas F.</h3>
-<div class="stars">★★★★☆</div>
-<p>"Decoração impecável e ótima organização."</p>
-<div class="response"><strong>AuraSix Experience:</strong> Muito obrigado! Seguimos evoluindo sempre 🎉</div>
-</div>
-
-<div class="feedback">
-<h3>Beatriz A.</h3>
-<div class="stars">★★★★★</div>
-<p>"Tecnologia e entretenimento perfeitos."</p>
-<div class="response"><strong>AuraSix Experience:</strong> Receber 5 estrelas assim é incrível 💙</div>
 </div>
 
 <div class="feedback">
 <h3>Thiago L.</h3>
 <div class="stars">★★☆☆☆</div>
-<p>"Esperava mais opções no pacote básico."</p>
-<div class="response"><strong>AuraSix Experience:</strong> Obrigado pela sinceridade. Já estamos melhorando isso.</div>
+<p>"Alguns itens do pacote básico demoraram para reposição durante a festa, o que causou pequeno desconforto."</p>
+<div class="response">
+<strong>AuraSix Experience:</strong> Thiago, sentimos pelo ocorrido. Nossa equipe já revisou o processo logístico e priorizou seu atendimento.
+<div class="protocol">Protocolo: #AX2026-2045 | Status: <span class="status">Em atendimento</span></div>
+</div>
+</div>
+
+<div class="feedback">
+<h3>Gabriel R.</h3>
+<div class="stars">★★★☆☆</div>
+<p>"A proposta é muito boa, porém senti falta de maior variedade de bebidas no pacote escolhido."</p>
+<div class="response">
+<strong>AuraSix Experience:</strong> Gabriel, agradecemos sua sugestão. Nosso setor comercial entrará em contato para apresentar novas opções.
+<div class="protocol">Protocolo: #AX2026-2046 | Status: <span class="status">Em análise</span></div>
+</div>
 </div>
 
 <div class="feedback">
 <h3>Marina K.</h3>
 <div class="stars">★★★★★</div>
-<p>"Energia surreal! Melhor evento que já fui."</p>
-<div class="response"><strong>AuraSix Experience:</strong> Energia boa assim contagia 💜</div>
+<p>"Energia incrível, ambientação moderna e equipe muito preparada. Foi o melhor evento que já organizei."</p>
+<div class="response">
+<strong>AuraSix Experience:</strong> Marina, sua satisfação é nosso maior indicador de sucesso. Obrigado por compartilhar sua experiência.
 </div>
-
-<div class="feedback">
-<h3>Eduardo V.</h3>
-<div class="stars">★★★☆☆</div>
-<p>"Boa experiência, mas o suporte pode ser mais rápido."</p>
-<div class="response"><strong>AuraSix Experience:</strong> Estamos otimizando nosso tempo de resposta ⚡</div>
-</div>
-
-<div class="feedback">
-<h3>Isabela N.</h3>
-<div class="stars">★★★★★</div>
-<p>"A ambientação futurista é surreal."</p>
-<div class="response"><strong>AuraSix Experience:</strong> Nossa essência é criar algo fora do comum ✨</div>
-</div>
-
-<div class="feedback">
-<h3>Bruno C.</h3>
-<div class="stars">★★★★☆</div>
-<p>"Muito profissionalismo e organização."</p>
-<div class="response"><strong>AuraSix Experience:</strong> Obrigado pela confiança! 🚀</div>
-</div>
-
-<div class="feedback">
-<h3>Amanda D.</h3>
-<div class="stars">★★★★★</div>
-<p>"Tudo superou minhas expectativas."</p>
-<div class="response"><strong>AuraSix Experience:</strong> Superar expectativas é nossa meta 🎯</div>
-</div>
-
-<div class="feedback">
-<h3>Felipe G.</h3>
-<div class="stars">★★★☆☆</div>
-<p>"Boa experiência, mas pode melhorar alguns detalhes."</p>
-<div class="response"><strong>AuraSix Experience:</strong> Estamos atentos a cada detalhe. Obrigado pelo feedback!</div>
-</div>
-
-<div class="feedback">
-<h3>Renata O.</h3>
-<div class="stars">★★★★★</div>
-<p>"Simplesmente impecável do início ao fim."</p>
-<div class="response"><strong>AuraSix Experience:</strong> Ler isso nos motiva ainda mais 💫</div>
 </div>
 
 </div>
-
-<h2>Deixe seu feedback</h2>
 
 <div class="submit-feedback">
 <input type="text" id="name" placeholder="Seu nome">
@@ -252,20 +182,23 @@ h2 {
 </div>
 
 <script>
+function generateProtocol() {
+  return "#AX2026-" + Math.floor(Math.random() * 9000 + 1000);
+}
+
 function generateResponse(stars) {
   if (stars === "★★★★★") {
-    return "Muito obrigado pela avaliação máxima! 💜";
+    return { text: "Agradecemos sua avaliação máxima. Seguimos comprometidos com a excelência.", protocol: false };
   }
   if (stars === "★★★★☆") {
-    return "Agradecemos muito! Estamos quase lá nas 5 estrelas 🚀";
+    return { text: "Muito obrigado pela avaliação. Estamos sempre aprimorando nossos serviços.", protocol: false };
   }
   if (stars === "★★★☆☆") {
-    return "Obrigado pela sinceridade! Vamos melhorar ainda mais.";
+    return { text: "Agradecemos sua sinceridade. Seu caso será analisado para melhorias imediatas.", protocol: true };
   }
-  if (stars === "★★☆☆☆") {
-    return "Sentimos que não foi perfeito. Vamos trabalhar nisso.";
+  if (stars === "★★☆☆☆" || stars === "★☆☆☆☆") {
+    return { text: "Sentimos por não atingir suas expectativas. Seu atendimento será tratado com prioridade.", protocol: true };
   }
-  return "Lamentamos não atingir suas expectativas. Queremos resolver isso!";
 }
 
 function addFeedback() {
@@ -273,21 +206,42 @@ function addFeedback() {
   const comment = document.getElementById("comment").value || "Sem comentário";
   const stars = document.getElementById("stars").value;
 
-  const response = generateResponse(stars);
-
+  const data = generateResponse(stars);
   const container = document.getElementById("feedbackContainer");
+
+  let protocolHTML = "";
+  if (data.protocol) {
+    const protocolNumber = generateProtocol();
+    protocolHTML = `
+      <div class="protocol">
+        Protocolo: ${protocolNumber} | Status: 
+        <span class="status">Em atendimento</span>
+      </div>
+    `;
+  }
 
   const div = document.createElement("div");
   div.classList.add("feedback");
-
   div.innerHTML = `
     <h3>${name}</h3>
     <div class="stars">${stars}</div>
     <p>"${comment}"</p>
-    <div class="response"><strong>AuraSix Experience:</strong> ${response}</div>
+    <div class="response">
+      <strong>AuraSix Experience:</strong> ${data.text}
+      ${protocolHTML}
+    </div>
   `;
 
   container.prepend(div);
+
+  if (data.protocol) {
+    setTimeout(() => {
+      const statusElement = div.querySelector(".status");
+      if (statusElement) {
+        statusElement.textContent = "Resolvido ✅";
+      }
+    }, 4000);
+  }
 
   document.getElementById("name").value = "";
   document.getElementById("comment").value = "";
