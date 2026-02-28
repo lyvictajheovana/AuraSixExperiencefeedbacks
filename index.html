@@ -3,167 +3,296 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aurasix Feedbacks - Futurístico</title>
+<title>AuraSix Experience - Feedbacks Futurísticos</title>
+
 <style>
-  body {
-    font-family: 'Arial', sans-serif;
-    background: #0a0a1f;
-    color: #c0f0ff;
-    margin: 0;
-    padding: 0;
-  }
-  header {
-    background: linear-gradient(90deg, #6a0dad, #00ffff);
-    color: #000;
-    text-align: center;
-    padding: 25px 0;
-    font-size: 1.7em;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-shadow: 0 0 8px #00ffff;
-  }
-  h2 {
-    color: #00ffff;
-    border-bottom: 1px solid #00ffff;
-    padding-bottom: 5px;
-    margin-top: 40px;
-    text-align: center;
-  }
-  .feedback-container {
-    max-width: 900px;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .feedback {
-    background: rgba(10,10,30,0.9);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px #00ffff;
-    position: relative;
-    overflow: hidden;
-  }
-  .feedback h3 {
-    margin: 0;
-    color: #00ffff;
-    font-size: 1.2em;
-  }
-  .feedback .stars {
-    color: #ffd700;
-    margin: 5px 0;
-    font-size: 1.1em;
-  }
-  .feedback p {
-    font-size: 1em;
-    line-height: 1.4;
-  }
-  .submit-feedback {
-    background: rgba(0,255,255,0.05);
-    padding: 20px;
-    margin: 40px auto;
-    max-width: 900px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px #00ffff;
-  }
-  .submit-feedback h3 {
-    margin-top: 0;
-    color: #00ffff;
-  }
-  .submit-feedback input, 
-  .submit-feedback textarea,
-  .submit-feedback select {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border: 1px solid #00ffff;
-    background: rgba(0,0,0,0.8);
-    color: #c0f0ff;
-  }
-  .submit-feedback button {
-    background: #00ffff;
-    color: #000;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: bold;
-    box-shadow: 0 0 10px #00ffff;
-    transition: 0.2s;
-  }
-  .submit-feedback button:hover {
-    background: #00cccc;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background: #0a0a1f;
+  color: #c0f0ff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(90deg, #6a0dad, #00ffff);
+  color: #000;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 1.8em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+h2 {
+  color: #00ffff;
+  border-bottom: 1px solid #00ffff;
+  padding-bottom: 5px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.feedback-container {
+  max-width: 900px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feedback {
+  background: rgba(10,10,30,0.95);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00ffff;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.feedback h3 {
+  margin: 0;
+  color: #00ffff;
+}
+
+.stars {
+  color: #ffd700;
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+.feedback p {
+  line-height: 1.4;
+}
+
+.response {
+  margin-top: 12px;
+  padding: 10px;
+  border-left: 3px solid #00ffff;
+  background: rgba(0,255,255,0.08);
+  border-radius: 6px;
+  font-size: 0.95em;
+}
+
+.submit-feedback {
+  background: rgba(0,255,255,0.05);
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.submit-feedback input,
+.submit-feedback textarea,
+.submit-feedback select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #00ffff;
+  background: rgba(0,0,0,0.8);
+  color: #c0f0ff;
+}
+
+.submit-feedback button {
+  background: #00ffff;
+  color: #000;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00ffff;
+  transition: 0.2s;
+}
+
+.submit-feedback button:hover {
+  background: #00cccc;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 </style>
 </head>
+
 <body>
 
-<header>Aurasix Experience - Feedbacks Futurísticos</header>
+<header>AuraSix Experience - Feedbacks Futurísticos</header>
 
 <h2>O que nossos clientes dizem</h2>
 
 <div class="feedback-container" id="feedbackContainer">
-  <div class="feedback">
-    <h3>Laura S.</h3>
-    <div class="stars">★★★★★</div>
-    <p>"A Aurasix transformou a festa do meu aniversário em algo inesquecível! Atendimento excelente e os pacotes são super personalizados."</p>
-  </div>
-  <div class="feedback">
-    <h3>Rafael M.</h3>
-    <div class="stars">★★★★☆</div>
-    <p>"Organizei uma confraternização com meus colegas e todos ficaram impressionados. Alguns detalhes poderiam ser mais rápidos, mas excelente."</p>
-  </div>
-  <div class="feedback">
-    <h3>Camila T.</h3>
-    <div class="stars">★★★★★</div>
-    <p>"O site é incrível e facilita muito na escolha dos pacotes. A experiência é futurista e divertida. Recomendo a todos."</p>
-  </div>
-  <div class="feedback">
-    <h3>Gabriel R.</h3>
-    <div class="stars">★★★☆☆</div>
-    <p>"Gostei do conceito e da personalização, mas senti falta de mais opções de bebidas no pacote. Ainda assim, recomendo."</p>
-  </div>
-  <div class="feedback">
-    <h3>Juliana P.</h3>
-    <div class="stars">★★★★★</div>
-    <p>"Simplesmente amei! O carrinho interativo e os pacotes são super fáceis de entender. Meus amigos adoraram a festa."</p>
-  </div>
+
+<!-- 15 CLIENTES FICTÍCIOS -->
+
+<div class="feedback">
+<h3>Laura S.</h3>
+<div class="stars">★★★★★</div>
+<p>"A AuraSix transformou minha festa em algo inesquecível!"</p>
+<div class="response"><strong>AuraSix Experience:</strong> Ficamos honrados em fazer parte desse momento especial 💜</div>
+</div>
+
+<div class="feedback">
+<h3>Rafael M.</h3>
+<div class="stars">★★★★☆</div>
+<p>"Organização impecável e equipe muito atenciosa."</p>
+<div class="response"><strong>AuraSix Experience:</strong> Obrigado, Rafael! Já estamos ajustando detalhes para atingir 5 estrelas 🚀</div>
+</div>
+
+<div class="feedback">
+<h3>Camila T.</h3>
+<div class="stars">★★★★★</div>
+<p>"Experiência futurista incrível. Recomendo demais."</p>
+<div class="response"><strong>AuraSix Experience:</strong> Seu feedback ilumina nossa missão ✨</div>
+</div>
+
+<div class="feedback">
+<h3>Gabriel R.</h3>
+<div class="stars">★★★☆☆</div>
+<p>"Gostei bastante, mas poderia ter mais opções de bebidas."</p>
+<div class="response"><strong>AuraSix Experience:</strong> Agradecemos a sugestão! Já estamos expandindo o cardápio 🍹</div>
+</div>
+
+<div class="feedback">
+<h3>Juliana P.</h3>
+<div class="stars">★★★★★</div>
+<p>"O carrinho interativo foi o destaque da festa."</p>
+<div class="response"><strong>AuraSix Experience:</strong> Que alegria saber disso! 💫</div>
+</div>
+
+<div class="feedback">
+<h3>Lucas F.</h3>
+<div class="stars">★★★★☆</div>
+<p>"Decoração impecável e ótima organização."</p>
+<div class="response"><strong>AuraSix Experience:</strong> Muito obrigado! Seguimos evoluindo sempre 🎉</div>
+</div>
+
+<div class="feedback">
+<h3>Beatriz A.</h3>
+<div class="stars">★★★★★</div>
+<p>"Tecnologia e entretenimento perfeitos."</p>
+<div class="response"><strong>AuraSix Experience:</strong> Receber 5 estrelas assim é incrível 💙</div>
+</div>
+
+<div class="feedback">
+<h3>Thiago L.</h3>
+<div class="stars">★★☆☆☆</div>
+<p>"Esperava mais opções no pacote básico."</p>
+<div class="response"><strong>AuraSix Experience:</strong> Obrigado pela sinceridade. Já estamos melhorando isso.</div>
+</div>
+
+<div class="feedback">
+<h3>Marina K.</h3>
+<div class="stars">★★★★★</div>
+<p>"Energia surreal! Melhor evento que já fui."</p>
+<div class="response"><strong>AuraSix Experience:</strong> Energia boa assim contagia 💜</div>
+</div>
+
+<div class="feedback">
+<h3>Eduardo V.</h3>
+<div class="stars">★★★☆☆</div>
+<p>"Boa experiência, mas o suporte pode ser mais rápido."</p>
+<div class="response"><strong>AuraSix Experience:</strong> Estamos otimizando nosso tempo de resposta ⚡</div>
+</div>
+
+<div class="feedback">
+<h3>Isabela N.</h3>
+<div class="stars">★★★★★</div>
+<p>"A ambientação futurista é surreal."</p>
+<div class="response"><strong>AuraSix Experience:</strong> Nossa essência é criar algo fora do comum ✨</div>
+</div>
+
+<div class="feedback">
+<h3>Bruno C.</h3>
+<div class="stars">★★★★☆</div>
+<p>"Muito profissionalismo e organização."</p>
+<div class="response"><strong>AuraSix Experience:</strong> Obrigado pela confiança! 🚀</div>
+</div>
+
+<div class="feedback">
+<h3>Amanda D.</h3>
+<div class="stars">★★★★★</div>
+<p>"Tudo superou minhas expectativas."</p>
+<div class="response"><strong>AuraSix Experience:</strong> Superar expectativas é nossa meta 🎯</div>
+</div>
+
+<div class="feedback">
+<h3>Felipe G.</h3>
+<div class="stars">★★★☆☆</div>
+<p>"Boa experiência, mas pode melhorar alguns detalhes."</p>
+<div class="response"><strong>AuraSix Experience:</strong> Estamos atentos a cada detalhe. Obrigado pelo feedback!</div>
+</div>
+
+<div class="feedback">
+<h3>Renata O.</h3>
+<div class="stars">★★★★★</div>
+<p>"Simplesmente impecável do início ao fim."</p>
+<div class="response"><strong>AuraSix Experience:</strong> Ler isso nos motiva ainda mais 💫</div>
+</div>
+
 </div>
 
 <h2>Deixe seu feedback</h2>
+
 <div class="submit-feedback">
-  <h3>Adicione um comentário fictício</h3>
-  <input type="text" id="name" placeholder="Seu nome">
-  <textarea id="comment" placeholder="Seu feedback"></textarea>
-  <select id="stars">
-    <option value="★★★★★">★★★★★</option>
-    <option value="★★★★☆">★★★★☆</option>
-    <option value="★★★☆☆">★★★☆☆</option>
-    <option value="★★☆☆☆">★★☆☆☆</option>
-    <option value="★☆☆☆☆">★☆☆☆☆</option>
-  </select>
-  <button onclick="addFeedback()">Enviar</button>
+<input type="text" id="name" placeholder="Seu nome">
+<textarea id="comment" placeholder="Seu feedback"></textarea>
+
+<select id="stars">
+<option value="★★★★★">★★★★★</option>
+<option value="★★★★☆">★★★★☆</option>
+<option value="★★★☆☆">★★★☆☆</option>
+<option value="★★☆☆☆">★★☆☆☆</option>
+<option value="★☆☆☆☆">★☆☆☆☆</option>
+</select>
+
+<button onclick="addFeedback()">Enviar</button>
 </div>
 
 <script>
-  function addFeedback() {
-    const name = document.getElementById('name').value || "Anônimo";
-    const comment = document.getElementById('comment').value || "Sem comentário";
-    const stars = document.getElementById('stars').value;
-
-    const container = document.getElementById('feedbackContainer');
-    const div = document.createElement('div');
-    div.classList.add('feedback');
-    div.innerHTML = `<h3>${name}</h3><div class="stars">${stars}</div><p>${comment}</p>`;
-    container.prepend(div);
-
-    // Limpa campos
-    document.getElementById('name').value = "";
-    document.getElementById('comment').value = "";
-    document.getElementById('stars').value = "★★★★★";
+function generateResponse(stars) {
+  if (stars === "★★★★★") {
+    return "Muito obrigado pela avaliação máxima! 💜";
   }
+  if (stars === "★★★★☆") {
+    return "Agradecemos muito! Estamos quase lá nas 5 estrelas 🚀";
+  }
+  if (stars === "★★★☆☆") {
+    return "Obrigado pela sinceridade! Vamos melhorar ainda mais.";
+  }
+  if (stars === "★★☆☆☆") {
+    return "Sentimos que não foi perfeito. Vamos trabalhar nisso.";
+  }
+  return "Lamentamos não atingir suas expectativas. Queremos resolver isso!";
+}
+
+function addFeedback() {
+  const name = document.getElementById("name").value || "Anônimo";
+  const comment = document.getElementById("comment").value || "Sem comentário";
+  const stars = document.getElementById("stars").value;
+
+  const response = generateResponse(stars);
+
+  const container = document.getElementById("feedbackContainer");
+
+  const div = document.createElement("div");
+  div.classList.add("feedback");
+
+  div.innerHTML = `
+    <h3>${name}</h3>
+    <div class="stars">${stars}</div>
+    <p>"${comment}"</p>
+    <div class="response"><strong>AuraSix Experience:</strong> ${response}</div>
+  `;
+
+  container.prepend(div);
+
+  document.getElementById("name").value = "";
+  document.getElementById("comment").value = "";
+  document.getElementById("stars").value = "★★★★★";
+}
 </script>
 
 </body>
