@@ -26,7 +26,6 @@ header {
 
 .badge {
   text-align: center;
-  margin-top: 10px;
   padding: 12px;
   background: rgba(0,255,255,0.1);
   border-top: 1px solid #00ffff;
@@ -34,8 +33,15 @@ header {
   font-size: 0.95em;
 }
 
+.stats {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: #00ffff;
+}
+
 .feedback-container {
-  max-width: 900px;
+  max-width: 950px;
   margin: 30px auto;
   display: flex;
   flex-direction: column;
@@ -86,7 +92,7 @@ header {
   background: rgba(0,255,255,0.05);
   padding: 20px;
   margin: 40px auto;
-  max-width: 900px;
+  max-width: 950px;
   border-radius: 12px;
   box-shadow: 0 0 15px #00ffff;
 }
@@ -121,46 +127,73 @@ header {
 <header>AuraSix Experience - Central de Feedbacks</header>
 
 <div class="badge">
-🏆 Empresa que responde 100% dos feedbacks | Tempo médio de resposta: 12 minutos
+🏆 Empresa que responde 100% dos feedbacks
+</div>
+
+<div class="stats">
+Tempo médio de resposta: 11 minutos | Índice de satisfação: 96%
 </div>
 
 <div class="feedback-container" id="feedbackContainer">
 
+<!-- ELOGIOS -->
+
 <div class="feedback">
 <h3>Laura S.</h3>
 <div class="stars">★★★★★</div>
-<p>"Desde o primeiro contato até o final do evento, tudo foi extremamente organizado. A equipe demonstrou profissionalismo e atenção aos detalhes."</p>
+<p>"Desde o planejamento até a execução, tudo foi extremamente organizado. A equipe demonstrou profissionalismo e atenção aos mínimos detalhes."</p>
 <div class="response">
-<strong>AuraSix Experience:</strong> Laura, agradecemos profundamente sua confiança. Trabalhamos para manter nosso padrão de excelência em cada experiência.
-</div>
-</div>
-
-<div class="feedback">
-<h3>Thiago L.</h3>
-<div class="stars">★★☆☆☆</div>
-<p>"Alguns itens do pacote básico demoraram para reposição durante a festa, o que causou pequeno desconforto."</p>
-<div class="response">
-<strong>AuraSix Experience:</strong> Thiago, sentimos pelo ocorrido. Nossa equipe já revisou o processo logístico e priorizou seu atendimento.
-<div class="protocol">Protocolo: #AX2026-2045 | Status: <span class="status">Em atendimento</span></div>
-</div>
-</div>
-
-<div class="feedback">
-<h3>Gabriel R.</h3>
-<div class="stars">★★★☆☆</div>
-<p>"A proposta é muito boa, porém senti falta de maior variedade de bebidas no pacote escolhido."</p>
-<div class="response">
-<strong>AuraSix Experience:</strong> Gabriel, agradecemos sua sugestão. Nosso setor comercial entrará em contato para apresentar novas opções.
-<div class="protocol">Protocolo: #AX2026-2046 | Status: <span class="status">Em análise</span></div>
+<strong>AuraSix Experience:</strong> Agradecemos profundamente sua confiança. Trabalhamos para que cada experiência seja memorável e organizada.
 </div>
 </div>
 
 <div class="feedback">
 <h3>Marina K.</h3>
 <div class="stars">★★★★★</div>
-<p>"Energia incrível, ambientação moderna e equipe muito preparada. Foi o melhor evento que já organizei."</p>
+<p>"Ambientação moderna, iluminação impecável e suporte presente durante todo o evento."</p>
 <div class="response">
-<strong>AuraSix Experience:</strong> Marina, sua satisfação é nosso maior indicador de sucesso. Obrigado por compartilhar sua experiência.
+<strong>AuraSix Experience:</strong> Ficamos felizes em superar suas expectativas. Obrigado por compartilhar sua experiência.
+</div>
+</div>
+
+<div class="feedback">
+<h3>Bruno C.</h3>
+<div class="stars">★★★★☆</div>
+<p>"Estrutura excelente e equipe educada. Apenas pequenos ajustes no tempo de montagem."</p>
+<div class="response">
+<strong>AuraSix Experience:</strong> Agradecemos sua observação. Já revisamos nosso cronograma para maior precisão operacional.
+</div>
+</div>
+
+<!-- RECLAMAÇÕES -->
+
+<div class="feedback">
+<h3>Thiago L.</h3>
+<div class="stars">★★☆☆☆</div>
+<p>"Alguns itens do buffet demoraram para reposição durante o evento."</p>
+<div class="response">
+<strong>AuraSix Experience:</strong> Sentimos pelo ocorrido. Nosso setor logístico revisou o processo e seu atendimento foi priorizado.
+<div class="protocol">Protocolo: #AX2026-4101 | Status: <span class="status">Em atendimento</span></div>
+</div>
+</div>
+
+<div class="feedback">
+<h3>Isabela N.</h3>
+<div class="stars">★☆☆☆☆</div>
+<p>"Tive dificuldade no primeiro contato para orçamento."</p>
+<div class="response">
+<strong>AuraSix Experience:</strong> Lamentamos a experiência inicial. Já reforçamos nossa equipe de atendimento e seu caso está sendo tratado com prioridade.
+<div class="protocol">Protocolo: #AX2026-4102 | Status: <span class="status">Em atendimento</span></div>
+</div>
+</div>
+
+<div class="feedback">
+<h3>Eduardo V.</h3>
+<div class="stars">★★★☆☆</div>
+<p>"Boa organização, mas houve pequeno atraso na montagem da decoração."</p>
+<div class="response">
+<strong>AuraSix Experience:</strong> Agradecemos o apontamento. Ajustamos nosso planejamento para evitar qualquer atraso futuro.
+<div class="protocol">Protocolo: #AX2026-4103 | Status: <span class="status">Em análise</span></div>
 </div>
 </div>
 
@@ -188,16 +221,16 @@ function generateProtocol() {
 
 function generateResponse(stars) {
   if (stars === "★★★★★") {
-    return { text: "Agradecemos sua avaliação máxima. Seguimos comprometidos com a excelência.", protocol: false };
+    return { text: "Agradecemos sua avaliação máxima. Seguimos comprometidos com excelência.", protocol: false };
   }
   if (stars === "★★★★☆") {
-    return { text: "Muito obrigado pela avaliação. Estamos sempre aprimorando nossos serviços.", protocol: false };
+    return { text: "Muito obrigado pela avaliação. Continuaremos aprimorando nossos serviços.", protocol: false };
   }
   if (stars === "★★★☆☆") {
-    return { text: "Agradecemos sua sinceridade. Seu caso será analisado para melhorias imediatas.", protocol: true };
+    return { text: "Agradecemos sua sinceridade. Seu feedback será analisado com atenção.", protocol: true };
   }
   if (stars === "★★☆☆☆" || stars === "★☆☆☆☆") {
-    return { text: "Sentimos por não atingir suas expectativas. Seu atendimento será tratado com prioridade.", protocol: true };
+    return { text: "Sentimos por não atingir suas expectativas. Seu atendimento será tratado com prioridade máxima.", protocol: true };
   }
 }
 
@@ -214,7 +247,7 @@ function addFeedback() {
     const protocolNumber = generateProtocol();
     protocolHTML = `
       <div class="protocol">
-        Protocolo: ${protocolNumber} | Status: 
+        Protocolo: ${protocolNumber} | Status:
         <span class="status">Em atendimento</span>
       </div>
     `;
